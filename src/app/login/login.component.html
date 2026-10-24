@@ -1,0 +1,135 @@
+<div class="flex min-h-screen items-center justify-center bg-gradient-to-br from-indigo-100 via-white to-purple-100 px-4 py-10">
+
+  <div class="grid w-full max-w-5xl overflow-hidden rounded-3xl bg-white shadow-2xl md:grid-cols-2">
+
+    <!-- Branding Section -->
+    <div class="hidden flex-col justify-center bg-indigo-600 p-12 text-white md:flex">
+      <h1 class="mb-8 text-4xl font-extrabold tracking-wide">
+        Zentro
+      </h1>
+
+      <h2 class="mb-4 text-3xl font-bold leading-snug">
+        Welcome Back!
+      </h2>
+
+      <p class="text-lg leading-8 text-indigo-100">
+        Discover products you love. Enjoy a simple and seamless shopping experience.
+      </p>
+
+      <div class="mt-10 rounded-2xl bg-white/10 p-6">
+        <p class="text-xl font-semibold">Shop Smart. Live Better.</p>
+        <p class="mt-2 text-sm text-indigo-100">
+          Your everyday shopping destination.
+        </p>
+      </div>
+    </div>
+
+    <!-- Login Form -->
+    <div class="p-6 sm:p-10 md:p-12">
+
+      <div class="mb-8">
+        <!-- <p class="text-sm font-bold uppercase tracking-widest text-indigo-600">
+          Zentro Account
+        </p> -->
+
+        <h2 class="mt-3 text-3xl text-center underline font-extrabold text-gray-900">
+          Sign In
+        </h2>
+
+        <!-- <p class="mt-2 text-sm text-gray-500">
+          Enter your details to continue.
+        </p> -->
+      </div>
+
+      <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" novalidate>
+
+        <!-- Email -->
+        <div class="mb-5">
+          <label for="email" class="mb-2 block text-sm font-semibold text-gray-700">
+            Email Address
+          </label>
+
+          <input
+            id="email"
+            type="email"
+            formControlName="email"
+            placeholder="demo@zentro.com"
+            class="w-full rounded-xl border border-gray-300 px-4 py-3 outline-none transition focus:border-indigo-500 focus:ring-4 focus:ring-indigo-100"
+          />
+
+          <p
+            *ngIf="email?.touched && email?.hasError('required')"
+            class="mt-2 text-sm text-red-500">
+            Email is required.
+          </p>
+
+          <p
+            *ngIf="email?.touched && email?.hasError('email')"
+            class="mt-2 text-sm text-red-500">
+            Enter a valid email address.
+          </p>
+        </div>
+
+        <!-- Password -->
+        <div class="mb-5">
+          <label for="password" class="mb-2 block text-sm font-semibold text-gray-700">
+            Password
+          </label>
+
+          <div class="relative">
+            <input
+              id="password"
+              [type]="showPassword ? 'text' : 'password'"
+              formControlName="password"
+              placeholder="Enter your password"
+              class="w-full rounded-xl border border-gray-300 px-4 py-3 pr-20 outline-none transition focus:border-indigo-500 focus:ring-4 focus:ring-indigo-100"
+            />
+
+            <button
+              type="button"
+              (click)="showPassword = !showPassword"
+              class="absolute right-3 top-1/2 -translate-y-1/2 text-sm font-semibold text-indigo-600">
+              {{ showPassword ? 'Hide' : 'Show' }}
+            </button>
+          </div>
+
+          <p
+            *ngIf="password?.touched && password?.hasError('required')"
+            class="mt-2 text-sm text-red-500">
+            Password is required.
+          </p>
+
+          <p
+            *ngIf="password?.touched && password?.hasError('minlength')"
+            class="mt-2 text-sm text-red-500">
+            Password must be at least 6 characters.
+          </p>
+        </div>
+
+        <!-- Login Error -->
+        <div
+          *ngIf="errorMessage"
+          class="mb-4 rounded-lg bg-red-50 p-3 text-sm text-red-600">
+          {{ errorMessage }}
+        </div>
+
+        <!-- Submit -->
+        <button
+          type="submit"
+          [disabled]="loginForm.invalid"
+          class="w-full rounded-xl bg-indigo-600 py-3.5 font-bold text-white shadow-lg shadow-indigo-200 transition hover:bg-indigo-700 disabled:cursor-not-allowed disabled:opacity-50">
+          Sign In
+        </button>
+
+        <p class="mt-6 text-center text-sm text-gray-500">
+          New to Zentro?
+          <a
+            href="/register"
+            class="font-semibold text-indigo-600 cursor-pointer hover:text-indigo-800">
+            Create an account
+          </a>
+        </p>
+      </form>
+    </div>
+  </div>
+</div>
