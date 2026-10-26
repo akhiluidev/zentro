@@ -12,11 +12,16 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { ProductsComponent } from './products/products.component';
+import { HttpClientModule } from '@angular/common/http';
+import { ProductListComponent } from './product-list/product-list.component';
+
+
 
 @NgModule({
   declarations: [
     AppComponent,
     RegisterComponent,
+    ProductListComponent,
   ],
   imports: [
     BrowserModule,
@@ -25,7 +30,8 @@ import { ProductsComponent } from './products/products.component';
     ReactiveFormsModule,
     AppRoutingModule,
     LoginComponent,
-        ProductsComponent
+        ProductsComponent,
+        HttpClientModule
 
   ],
   providers: [],
