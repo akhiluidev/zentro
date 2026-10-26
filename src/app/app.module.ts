@@ -13,7 +13,6 @@ import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { ProductsComponent } from './products/products.component';
 import { HttpClientModule } from '@angular/common/http';
-import { ProductListComponent } from './product-list/product-list.component';
 
 
 
@@ -21,7 +20,6 @@ import { ProductListComponent } from './product-list/product-list.component';
   declarations: [
     AppComponent,
     RegisterComponent,
-    ProductListComponent,
   ],
   imports: [
     BrowserModule,
