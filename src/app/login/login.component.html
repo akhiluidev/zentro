@@ -1,10 +1,11 @@
-```html
+
 <div class="flex min-h-screen items-center justify-center bg-gradient-to-br from-indigo-100 via-white to-purple-100 px-4 py-10">
 
   <div class="grid w-full max-w-5xl overflow-hidden rounded-3xl bg-white shadow-2xl md:grid-cols-2">
 
     <!-- Branding Section -->
     <div class="hidden flex-col justify-center bg-indigo-600 p-12 text-white md:flex">
+
       <h1 class="mb-8 text-4xl font-extrabold tracking-wide">
         Zentro<span class="text-indigo-300">.</span>
       </h1>
@@ -23,15 +24,32 @@
           Your everyday shopping destination.
         </p>
       </div>
+
     </div>
 
     <!-- Login Form -->
     <div class="p-6 sm:p-10 md:p-12">
 
-      <div class="mb-8">
-        <h2 class="mt-3 text-3xl text-center underline font-extrabold text-gray-900">
+      <!-- Zentro Logo -->
+      <div class="mb-8 text-center">
+        <h1 class="text-4xl font-black tracking-wide text-indigo-600">
+          Zentro<span class="text-indigo-300">.</span>
+        </h1>
+
+        <p class="mt-1 text-xs font-medium tracking-wider text-slate-500">
+          YOUR WORLD, YOUR SHOPPING
+        </p>
+      </div>
+
+      <!-- Heading -->
+      <div class="mb-8 text-center">
+        <h2 class="text-3xl font-extrabold text-gray-900">
           Sign In
         </h2>
+
+        <p class="mt-2 text-sm text-slate-500">
+          Welcome back! Please login to your account.
+        </p>
       </div>
 
       <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" novalidate>
@@ -129,4 +147,3 @@
     </div>
   </div>
 </div>
-```

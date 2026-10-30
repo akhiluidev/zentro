@@ -13,7 +13,6 @@ import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { ProductsComponent } from './products/products.component';
 import { HttpClientModule } from '@angular/common/http';
-import { ProductListComponent } from './product-list/product-list.component';
 import { FooterComponent } from './footer/footer.component';
 
 
@@ -22,7 +21,7 @@ import { FooterComponent } from './footer/footer.component';
   declarations: [
     AppComponent,
     RegisterComponent,
-    ProductListComponent,
+
 
   ],
   imports: [

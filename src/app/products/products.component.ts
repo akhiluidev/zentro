@@ -8,7 +8,6 @@ import { HttpClient } from '@angular/common/http';
 import { FooterComponent } from '../footer/footer.component';
 import { Router } from '@angular/router';
 
-
 @Component({
   selector: 'app-products',
   standalone: true,
@@ -18,23 +17,25 @@ import { Router } from '@angular/router';
     ButtonModule,
     TagModule,
     FooterComponent
-
   ],
   templateUrl: './products.component.html',
   styleUrls: ['./products.component.css']
 })
 export class ProductsComponent {
 
-
   products: any[] = [];
-  filterProducts :any=[]
+  filterProducts: any[] = [];
+
   showProfile = false;
   userDetails: any;
   zentroUsers: any;
 
+  selectedCategory: string = '';
+
   constructor(private http: HttpClient, private router: Router) {
 
   }
+
   ngOnInit(): void {
     this.getProducts();
 
@@ -48,9 +49,9 @@ export class ProductsComponent {
         (user: any) => user.email === loggedInEmail
       );
     }
-  localStorage.getItem('loggedInEmail')
-  }
 
+    localStorage.getItem('loggedInEmail');
+  }
 
   responsiveOptions = [
     {
@@ -69,14 +70,16 @@ export class ProductsComponent {
       numScroll: 1
     }
   ];
+
+  // GET ALL PRODUCTS
   getProducts(): void {
     this.http
       .get<any>('https://dummyjson.com/products?limit=100')
       .subscribe({
         next: (response) => {
           this.products = response.products;
-        this.filterProducts = [...response.products];
-
+          this.filterProducts = [...response.products];
+          this.selectedCategory = '';
         },
         error: (error) => {
           console.error(error);
@@ -84,16 +87,37 @@ export class ProductsComponent {
       });
   }
 
- searchProduct(event: Event) {
-  const value = (event.target as HTMLInputElement).value.toLowerCase();
+  // CATEGORY API
+  getProductsByCategory(category: string): void {
+    this.selectedCategory = category;
+  localStorage.setItem('selectedCategory', category);
 
-  this.products = this.filterProducts.filter((p: any) =>
-    p.title.toLowerCase().includes(value)
-  );
+    this.http
+      .get<any>(`https://dummyjson.com/products/category/${category}`)
+      .subscribe({
+        next: (response) => {
+          this.products = response.products;
+          this.filterProducts = [...response.products];
+        },
+        error: (error) => {
+          console.error('Category loading failed:', error);
+        }
+      });
+  }
 
-  console.log(this.products);
-}
+  // SEARCH PRODUCTS
+  searchProduct(event: Event): void {
+    const value = (event.target as HTMLInputElement).value.toLowerCase();
 
+    this.products = this.filterProducts.filter((p: any) =>
+      p.title.toLowerCase().includes(value)
+    );
+  }
+
+  // SHOW ALL PRODUCTS
+  showAllProducts(): void {
+    this.getProducts();
+  }
 
   logout(): void {
     localStorage.removeItem('isLoggedIn');
@@ -104,4 +128,3 @@ export class ProductsComponent {
     this.router.navigate(['/login']);
   }
 }
-

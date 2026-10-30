@@ -59,26 +59,26 @@
     <!-- HERO BANNER -->
 
     <!-- Welcome User Section -->
-   <div
-  class="mt-4 mb-6 overflow-hidden rounded-2xl bg-gradient-to-r from-indigo-600 via-indigo-700 to-blue-800 p-5 text-white shadow-lg sm:p-7">
-<div class="flex flex-col justify-between gap-4 sm:flex-row sm:items-center">
+    <div
+      class="mt-4 mb-6 overflow-hidden rounded-2xl bg-gradient-to-r from-indigo-600 via-indigo-700 to-blue-800 p-5 text-white shadow-lg sm:p-7">
+      <div class="flex flex-col justify-between gap-4 sm:flex-row sm:items-center">
 
-  <div>
-    <p class="mb-2 text-sm font-medium tracking-wide text-indigo-200">
-      WELCOME TO ZENTRO
-    </p>
+        <div>
+          <p class="mb-2 text-sm font-medium tracking-wide text-indigo-200">
+            WELCOME TO ZENTRO
+          </p>
 
-    <h1 class="text-2xl font-extrabold tracking-tight sm:text-3xl">
-      Hello, {{ zentroUsers?.fullName }}!
-    </h1>
+          <h1 class="text-2xl font-extrabold tracking-tight sm:text-3xl">
+            Hello, {{ zentroUsers?.fullName }}!
+          </h1>
 
-    <p class="mt-2 text-sm text-indigo-100 sm:text-base">
-      Great to see you again. Happy shopping!
-    </p>
-  </div>
+          <p class="mt-2 text-sm text-indigo-100 sm:text-base">
+            Great to see you again. Happy shopping!
+          </p>
+        </div>
 
-  </div>
-</div>
+      </div>
+    </div>
 
 
     <section
@@ -144,6 +144,120 @@
       </div>
 
     </section>
+<div class="mt-6 flex flex-wrap justify-center gap-x-4 gap-y-5">
+
+  <!-- Beauty -->
+  <div (click)="getProductsByCategory('beauty')"
+    class="group flex w-[100px] cursor-pointer flex-col items-center">
+    <div class="h-[90px] w-full overflow-hidden rounded-xl border border-slate-200 border-b-[5px] border-b-blue-500 bg-white shadow-sm transition-all duration-300 group-hover:-translate-y-1 group-hover:border-blue-500 group-hover:shadow-lg group-hover:shadow-blue-200">
+      <img src="https://cdn.dummyjson.com/product-images/beauty/essence-mascara-lash-princess/thumbnail.webp"
+        class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-110" alt="Beauty">
+    </div>
+    <span class="mt-2 text-center text-xs font-semibold text-slate-700 group-hover:text-blue-600">Beauty</span>
+  </div>
+
+  <!-- Fragrances -->
+  <div (click)="getProductsByCategory('fragrances')"
+    class="group flex w-[100px] cursor-pointer flex-col items-center">
+    <div class="h-[90px] w-full overflow-hidden rounded-xl border border-slate-200 border-b-[5px] border-b-blue-500 bg-white shadow-sm transition-all duration-300 group-hover:-translate-y-1 group-hover:border-blue-500 group-hover:shadow-lg group-hover:shadow-blue-200">
+      <img src="https://cdn.dummyjson.com/product-images/fragrances/gucci-bloom-eau-de/thumbnail.webp"
+        class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-110" alt="Fragrances">
+    </div>
+    <span class="mt-2 text-center text-xs font-semibold text-slate-700 group-hover:text-blue-600">Fragrances</span>
+  </div>
+
+  <!-- Furniture -->
+  <div (click)="getProductsByCategory('furniture')"
+    class="group flex w-[100px] cursor-pointer flex-col items-center">
+    <div class="h-[90px] w-full overflow-hidden rounded-xl border border-slate-200 border-b-[5px] border-b-blue-500 bg-white shadow-sm transition-all duration-300 group-hover:-translate-y-1 group-hover:border-blue-500 group-hover:shadow-lg group-hover:shadow-blue-200">
+      <img src="https://cdn.dummyjson.com/product-images/furniture/annibale-colombo-bed/thumbnail.webp"
+        class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-110" alt="Furniture">
+    </div>
+    <span class="mt-2 text-center text-xs font-semibold text-slate-700 group-hover:text-blue-600">Furniture</span>
+  </div>
+
+  <!-- Groceries -->
+  <div (click)="getProductsByCategory('groceries')"
+    class="group flex w-[100px] cursor-pointer flex-col items-center">
+    <div class="h-[90px] w-full overflow-hidden rounded-xl border border-slate-200 border-b-[5px] border-b-blue-500 bg-white shadow-sm transition-all duration-300 group-hover:-translate-y-1 group-hover:border-blue-500 group-hover:shadow-lg group-hover:shadow-blue-200">
+      <img src="https://cdn.dummyjson.com/product-images/groceries/apple/thumbnail.webp"
+        class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-110" alt="Groceries">
+    </div>
+    <span class="mt-2 text-center text-xs font-semibold text-slate-700 group-hover:text-blue-600">Groceries</span>
+  </div>
+
+  <!-- Home Decoration -->
+  <div (click)="getProductsByCategory('home-decoration')"
+    class="group flex w-[100px] cursor-pointer flex-col items-center">
+    <div class="h-[90px] w-full overflow-hidden rounded-xl border border-slate-200 border-b-[5px] border-b-blue-500 bg-white shadow-sm transition-all duration-300 group-hover:-translate-y-1 group-hover:border-blue-500 group-hover:shadow-lg group-hover:shadow-blue-200">
+      <img src="https://cdn.dummyjson.com/product-images/home-decoration/plant-pot/thumbnail.webp"
+        class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-110" alt="Home Decoration">
+    </div>
+    <span class="mt-2 text-center text-xs font-semibold text-slate-700 group-hover:text-blue-600">Home Decoration</span>
+  </div>
+
+  <!-- Kitchen Accessories -->
+  <div (click)="getProductsByCategory('kitchen-accessories')"
+    class="group flex w-[100px] cursor-pointer flex-col items-center">
+    <div class="h-[90px] w-full overflow-hidden rounded-xl border border-slate-200 border-b-[5px] border-b-blue-500 bg-white shadow-sm transition-all duration-300 group-hover:-translate-y-1 group-hover:border-blue-500 group-hover:shadow-lg group-hover:shadow-blue-200">
+      <img src="https://cdn.dummyjson.com/product-images/kitchen-accessories/bamboo-spatula/thumbnail.webp"
+        class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-110" alt="Kitchen Accessories">
+    </div>
+    <span class="mt-2 text-center text-xs font-semibold text-slate-700 group-hover:text-blue-600">Kitchen Accessories</span>
+  </div>
+
+  <!-- Laptops -->
+  <div (click)="getProductsByCategory('laptops')"
+    class="group flex w-[100px] cursor-pointer flex-col items-center">
+    <div class="h-[90px] w-full overflow-hidden rounded-xl border border-slate-200 border-b-[5px] border-b-blue-500 bg-white shadow-sm transition-all duration-300 group-hover:-translate-y-1 group-hover:border-blue-500 group-hover:shadow-lg group-hover:shadow-blue-200">
+      <img src="https://cdn.dummyjson.com/product-images/laptops/apple-macbook-pro-14-inch-space-grey/thumbnail.webp"
+        class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-110" alt="Laptops">
+    </div>
+    <span class="mt-2 text-center text-xs font-semibold text-slate-700 group-hover:text-blue-600">Laptops</span>
+  </div>
+
+  <!-- Men's Shirts -->
+  <div (click)="getProductsByCategory('mens-shirts')"
+    class="group flex w-[100px] cursor-pointer flex-col items-center">
+    <div class="h-[90px] w-full overflow-hidden rounded-xl border border-slate-200 border-b-[5px] border-b-blue-500 bg-white shadow-sm transition-all duration-300 group-hover:-translate-y-1 group-hover:border-blue-500 group-hover:shadow-lg group-hover:shadow-blue-200">
+      <img src="https://cdn.dummyjson.com/product-images/mens-shirts/blue-&-black-check-shirt/thumbnail.webp"
+        class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-110" alt="Men's Shirts">
+    </div>
+    <span class="mt-2 text-center text-xs font-semibold text-slate-700 group-hover:text-blue-600">Men's Shirts</span>
+  </div>
+
+  <!-- Men's Shoes -->
+  <div (click)="getProductsByCategory('mens-shoes')"
+    class="group flex w-[100px] cursor-pointer flex-col items-center">
+    <div class="h-[90px] w-full overflow-hidden rounded-xl border border-slate-200 border-b-[5px] border-b-blue-500 bg-white shadow-sm transition-all duration-300 group-hover:-translate-y-1 group-hover:border-blue-500 group-hover:shadow-lg group-hover:shadow-blue-200">
+      <img src="https://cdn.dummyjson.com/product-images/mens-shoes/nike-air-jordan-1-red-and-black/thumbnail.webp"
+        class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-110" alt="Men's Shoes">
+    </div>
+    <span class="mt-2 text-center text-xs font-semibold text-slate-700 group-hover:text-blue-600">Men's Shoes</span>
+  </div>
+
+  <!-- Men's Watches -->
+  <div (click)="getProductsByCategory('mens-watches')"
+    class="group flex w-[100px] cursor-pointer flex-col items-center">
+    <div class="h-[90px] w-full overflow-hidden rounded-xl border border-slate-200 border-b-[5px] border-b-blue-500 bg-white shadow-sm transition-all duration-300 group-hover:-translate-y-1 group-hover:border-blue-500 group-hover:shadow-lg group-hover:shadow-blue-200">
+      <img src="https://cdn.dummyjson.com/product-images/mens-watches/rolex-submariner-watch/thumbnail.webp"
+        class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-110" alt="Men's Watches">
+    </div>
+    <span class="mt-2 text-center text-xs font-semibold text-slate-700 group-hover:text-blue-600">Men's Watches</span>
+  </div>
+
+  <!-- Mobile Accessories -->
+  <div (click)="getProductsByCategory('mobile-accessories')"
+    class="group flex w-[100px] cursor-pointer flex-col items-center">
+    <div class="h-[90px] w-full overflow-hidden rounded-xl border border-slate-200 border-b-[5px] border-b-blue-500 bg-white shadow-sm transition-all duration-300 group-hover:-translate-y-1 group-hover:border-blue-500 group-hover:shadow-lg group-hover:shadow-blue-200">
+      <img src="https://cdn.dummyjson.com/product-images/mobile-accessories/apple-airpods/thumbnail.webp"
+        class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-110" alt="Mobile Accessories">
+    </div>
+    <span class="mt-2 text-center text-xs font-semibold text-slate-700 group-hover:text-blue-600">Mobile Accessories</span>
+  </div>
+
+</div>
+
     <!-- PRODUCTS LAYOUT -->
     <div class="mt-6 grid grid-cols-1 items-start gap-5 lg:mt-8 lg:grid-cols-[230px_minmax(0,1fr)] lg:gap-6">
 
@@ -210,11 +324,10 @@
 
       <!-- PRODUCT SECTION -->
       <section class="min-w-0">
-
         <!-- STICKY HEADER + CATEGORY PILLS -->
-        <div class="sticky top-[72px] z-30 bg-slate-50 py-2">
-          <!-- PRODUCTS HEADER -->
-          <div class="flex flex-col justify-between gap-2 sm:flex-row sm:items-center sm:gap-3">
+        <div class=" sticky top-[72px] z-30 bg-slate-50 py-2">
+
+          <div class="flex sticky flex-col justify-between gap-2 sm:flex-row sm:items-center sm:gap-3">
             <div class="min-w-0">
               <h2 class="text-xl mt-4 font-extrabold text-slate-900 sm:text-2xl">
                 All Products
@@ -232,39 +345,10 @@
               <input type="search" placeholder="Search for products, brands and more..." (input)="searchProduct($event)"
                 class="w-full border-2 border-indigo-300 rounded-full bg-white py-2.5 pl-11 pr-4 text-sm text-slate-800 placeholder-slate-400 outline-none ring-2 ring-transparent transition focus:ring-indigo-300" />
             </div>
-
-            <!-- <p class="shrink-0 text-xs text-slate-500 sm:text-sm">
-              Products available: {{ products.length }}
-            </p> -->
           </div>
-
-          <!-- CATEGORY PILLS -->
-          <!-- <div class="mt-8 flex gap-2 overflow-x-auto pb-2 sm:mt-5 sm:gap-3">
-
-            <button type="button"
-              class="shrink-0 rounded-full bg-indigo-600 px-4 py-2 text-xs font-bold text-white sm:px-5 sm:py-2.5 sm:text-sm">
-              All Products
-            </button>
-
-            <button type="button"
-              class="shrink-0 rounded-full border border-slate-200 bg-white px-4 py-2 text-xs font-semibold text-slate-600 sm:px-5 sm:py-2.5 sm:text-sm">
-              Electronics
-            </button>
-
-            <button type="button"
-              class="shrink-0 rounded-full border border-slate-200 bg-white px-4 py-2 text-xs font-semibold text-slate-600 sm:px-5 sm:py-2.5 sm:text-sm">
-              Fashion
-            </button>
-
-            <button type="button"
-              class="shrink-0 rounded-full border border-slate-200 bg-white px-4 py-2 text-xs font-semibold text-slate-600 sm:px-5 sm:py-2.5 sm:text-sm">
-              Accessories
-            </button>
-
-          </div> -->
         </div>
 
-        <!-- PRODUCT GRID -->
+
 
         <!-- NO PRODUCTS MESSAGE -->
         <div *ngIf="products.length === 0" class="py-10 text-center">
