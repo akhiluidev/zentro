@@ -14,6 +14,7 @@ import { RegisterComponent } from './register/register.component';
 import { ProductsComponent } from './products/products.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FooterComponent } from './footer/footer.component';
+import { ProductDetailsComponent } from './product-details/product-details.component';
 
 
 
@@ -21,6 +22,7 @@ import { FooterComponent } from './footer/footer.component';
   declarations: [
     AppComponent,
     RegisterComponent,
+    ProductDetailsComponent,
 
 
   ],
@@ -30,15 +32,15 @@ import { FooterComponent } from './footer/footer.component';
     FormsModule,
     ReactiveFormsModule,
     AppRoutingModule,
-        ProductsComponent,
-        HttpClientModule,
-                    FooterComponent
+    ProductsComponent,
+    HttpClientModule,
+    FooterComponent
 
-        
+
 
 
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule {}
+export class AppModule { }

@@ -90,7 +90,7 @@ export class ProductsComponent {
   // CATEGORY API
   getProductsByCategory(category: string): void {
     this.selectedCategory = category;
-  localStorage.setItem('selectedCategory', category);
+    localStorage.setItem('selectedCategory', category);
 
     this.http
       .get<any>(`https://dummyjson.com/products/category/${category}`)
@@ -127,4 +127,7 @@ export class ProductsComponent {
 
     this.router.navigate(['/login']);
   }
+viewProduct(id: number): void {
+  this.router.navigate(['/product-details', id]);
+}
 }

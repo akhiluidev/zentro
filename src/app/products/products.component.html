@@ -144,119 +144,139 @@
       </div>
 
     </section>
-<div class="mt-6 flex flex-wrap justify-center gap-x-4 gap-y-5">
+    <div class="mt-6 flex flex-wrap justify-center gap-x-4 gap-y-5">
 
-  <!-- Beauty -->
-  <div (click)="getProductsByCategory('beauty')"
-    class="group flex w-[100px] cursor-pointer flex-col items-center">
-    <div class="h-[90px] w-full overflow-hidden rounded-xl border border-slate-200 border-b-[5px] border-b-blue-500 bg-white shadow-sm transition-all duration-300 group-hover:-translate-y-1 group-hover:border-blue-500 group-hover:shadow-lg group-hover:shadow-blue-200">
-      <img src="https://cdn.dummyjson.com/product-images/beauty/essence-mascara-lash-princess/thumbnail.webp"
-        class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-110" alt="Beauty">
+      <!-- Beauty -->
+      <div (click)="getProductsByCategory('beauty')" class="group flex w-[100px] cursor-pointer flex-col items-center">
+        <div
+          class="h-[90px] w-full overflow-hidden rounded-xl border border-slate-200 border-b-[5px] border-b-blue-500 bg-white shadow-sm transition-all duration-300 group-hover:-translate-y-1 group-hover:border-blue-500 group-hover:shadow-lg group-hover:shadow-blue-200">
+          <img src="../../assets/beauty.webp"
+            class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-110" alt="Beauty">
+        </div>
+        <span class="mt-2 text-center text-xs font-semibold text-slate-700 group-hover:text-blue-600">Beauty</span>
+      </div>
+
+      <!-- Fragrances -->
+      <div (click)="getProductsByCategory('fragrances')"
+        class="group flex w-[100px] cursor-pointer flex-col items-center">
+        <div
+          class="h-[90px] w-full overflow-hidden rounded-xl border border-slate-200 border-b-[5px] border-b-blue-500 bg-white shadow-sm transition-all duration-300 group-hover:-translate-y-1 group-hover:border-blue-500 group-hover:shadow-lg group-hover:shadow-blue-200">
+          <img src="../../assets/perfume.webp"
+            class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-110" alt="Fragrances">
+        </div>
+        <span class="mt-2 text-center text-xs font-semibold text-slate-700 group-hover:text-blue-600">Fragrances</span>
+      </div>
+
+      <!-- Furniture -->
+      <div (click)="getProductsByCategory('furniture')"
+        class="group flex w-[100px] cursor-pointer flex-col items-center">
+        <div
+          class="h-[90px] w-full overflow-hidden rounded-xl border border-slate-200 border-b-[5px] border-b-blue-500 bg-white shadow-sm transition-all duration-300 group-hover:-translate-y-1 group-hover:border-blue-500 group-hover:shadow-lg group-hover:shadow-blue-200">
+          <img src="../../assets/frumiture.webp"
+            class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-110" alt="Furniture">
+        </div>
+        <span class="mt-2 text-center text-xs font-semibold text-slate-700 group-hover:text-blue-600">Furniture</span>
+      </div>
+
+      <!-- Groceries -->
+      <div (click)="getProductsByCategory('groceries')"
+        class="group flex w-[100px] cursor-pointer flex-col items-center">
+        <div
+          class="h-[90px] w-full overflow-hidden rounded-xl border border-slate-200 border-b-[5px] border-b-blue-500 bg-white shadow-sm transition-all duration-300 group-hover:-translate-y-1 group-hover:border-blue-500 group-hover:shadow-lg group-hover:shadow-blue-200">
+          <img src="../../assets/fruits.webp"
+            class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-110" alt="Groceries">
+        </div>
+        <span class="mt-2 text-center text-xs font-semibold text-slate-700 group-hover:text-blue-600">Groceries</span>
+      </div>
+
+      <!-- Home Decoration -->
+      <div (click)="getProductsByCategory('home-decoration')"
+        class="group flex w-[100px] cursor-pointer flex-col items-center">
+        <div
+          class="h-[90px] w-full overflow-hidden rounded-xl border border-slate-200 border-b-[5px] border-b-blue-500 bg-white shadow-sm transition-all duration-300 group-hover:-translate-y-1 group-hover:border-blue-500 group-hover:shadow-lg group-hover:shadow-blue-200">
+          <img src="../../assets/flower.webp"
+            class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-110"
+            alt="Home Decoration">
+        </div>
+        <span class="mt-2 text-center text-xs font-semibold text-slate-700 group-hover:text-blue-600">Home
+          Decoration</span>
+      </div>
+
+      <!-- Kitchen Accessories -->
+      <div (click)="getProductsByCategory('kitchen-accessories')"
+        class="group flex w-[100px] cursor-pointer flex-col items-center">
+        <div
+          class="h-[90px] w-full overflow-hidden rounded-xl border border-slate-200 border-b-[5px] border-b-blue-500 bg-white shadow-sm transition-all duration-300 group-hover:-translate-y-1 group-hover:border-blue-500 group-hover:shadow-lg group-hover:shadow-blue-200">
+          <img src="../../assets/utensil.webp"
+            class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-110"
+            alt="Kitchen Accessories">
+        </div>
+        <span class="mt-2 text-center text-xs font-semibold text-slate-700 group-hover:text-blue-600">Kitchen
+          Accessories</span>
+      </div>
+
+      <!-- Laptops -->
+      <div (click)="getProductsByCategory('laptops')" class="group flex w-[100px] cursor-pointer flex-col items-center">
+        <div
+          class="h-[90px] w-full overflow-hidden rounded-xl border border-slate-200 border-b-[5px] border-b-blue-500 bg-white shadow-sm transition-all duration-300 group-hover:-translate-y-1 group-hover:border-blue-500 group-hover:shadow-lg group-hover:shadow-blue-200">
+          <img src="../../assets/laptop.webp"
+            class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-110" alt="Laptops">
+        </div>
+        <span class="mt-2 text-center text-xs font-semibold text-slate-700 group-hover:text-blue-600">Laptops</span>
+      </div>
+
+      <!-- Men's Shirts -->
+      <div (click)="getProductsByCategory('mens-shirts')"
+        class="group flex w-[100px] cursor-pointer flex-col items-center">
+        <div
+          class="h-[90px] w-full overflow-hidden rounded-xl border border-slate-200 border-b-[5px] border-b-blue-500 bg-white shadow-sm transition-all duration-300 group-hover:-translate-y-1 group-hover:border-blue-500 group-hover:shadow-lg group-hover:shadow-blue-200">
+          <img src="../../assets/shirt.webp"
+            class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-110"
+            alt="Men's Shirts">
+        </div>
+        <span class="mt-2 text-center text-xs font-semibold text-slate-700 group-hover:text-blue-600">Men's
+          Shirts</span>
+      </div>
+
+      <!-- Men's Shoes -->
+      <div (click)="getProductsByCategory('mens-shoes')"
+        class="group flex w-[100px] cursor-pointer flex-col items-center">
+        <div
+          class="h-[90px] w-full overflow-hidden rounded-xl border border-slate-200 border-b-[5px] border-b-blue-500 bg-white shadow-sm transition-all duration-300 group-hover:-translate-y-1 group-hover:border-blue-500 group-hover:shadow-lg group-hover:shadow-blue-200">
+          <img src="../../assets/shoes.webp"
+            class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-110"
+            alt="Men's Shoes">
+        </div>
+        <span class="mt-2 text-center text-xs font-semibold text-slate-700 group-hover:text-blue-600">Men's Shoes</span>
+      </div>
+
+      <!-- Men's Watches -->
+      <div (click)="getProductsByCategory('mens-watches')"
+        class="group flex w-[100px] cursor-pointer flex-col items-center">
+        <div
+          class="h-[90px] w-full overflow-hidden rounded-xl border border-slate-200 border-b-[5px] border-b-blue-500 bg-white shadow-sm transition-all duration-300 group-hover:-translate-y-1 group-hover:border-blue-500 group-hover:shadow-lg group-hover:shadow-blue-200">
+          <img src="../../assets/watch.webp"
+            class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-110"
+            alt="Men's Watches">
+        </div>
+        <span class="mt-2 text-center text-xs font-semibold text-slate-700 group-hover:text-blue-600">Men's
+          Watches</span>
+      </div>
+
+      <!-- Mobile Accessories -->
+      <div (click)="getProductsByCategory('mobile-accessories')"
+        class="group flex w-[100px] cursor-pointer flex-col items-center">
+        <div
+          class="h-[90px] w-full overflow-hidden rounded-xl border border-slate-200 border-b-[5px] border-b-blue-500 bg-white shadow-sm transition-all duration-300 group-hover:-translate-y-1 group-hover:border-blue-500 group-hover:shadow-lg group-hover:shadow-blue-200">
+          <img src="../../assets/Airpod"
+            class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-110"
+            alt="Mobile Accessories">
+        </div>
+        <span class="mt-2 text-center text-xs font-semibold text-slate-700 group-hover:text-blue-600">Mobile
+          Accessories</span>
+      </div>
+
     </div>
-    <span class="mt-2 text-center text-xs font-semibold text-slate-700 group-hover:text-blue-600">Beauty</span>
-  </div>
-
-  <!-- Fragrances -->
-  <div (click)="getProductsByCategory('fragrances')"
-    class="group flex w-[100px] cursor-pointer flex-col items-center">
-    <div class="h-[90px] w-full overflow-hidden rounded-xl border border-slate-200 border-b-[5px] border-b-blue-500 bg-white shadow-sm transition-all duration-300 group-hover:-translate-y-1 group-hover:border-blue-500 group-hover:shadow-lg group-hover:shadow-blue-200">
-      <img src="https://cdn.dummyjson.com/product-images/fragrances/gucci-bloom-eau-de/thumbnail.webp"
-        class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-110" alt="Fragrances">
-    </div>
-    <span class="mt-2 text-center text-xs font-semibold text-slate-700 group-hover:text-blue-600">Fragrances</span>
-  </div>
-
-  <!-- Furniture -->
-  <div (click)="getProductsByCategory('furniture')"
-    class="group flex w-[100px] cursor-pointer flex-col items-center">
-    <div class="h-[90px] w-full overflow-hidden rounded-xl border border-slate-200 border-b-[5px] border-b-blue-500 bg-white shadow-sm transition-all duration-300 group-hover:-translate-y-1 group-hover:border-blue-500 group-hover:shadow-lg group-hover:shadow-blue-200">
-      <img src="https://cdn.dummyjson.com/product-images/furniture/annibale-colombo-bed/thumbnail.webp"
-        class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-110" alt="Furniture">
-    </div>
-    <span class="mt-2 text-center text-xs font-semibold text-slate-700 group-hover:text-blue-600">Furniture</span>
-  </div>
-
-  <!-- Groceries -->
-  <div (click)="getProductsByCategory('groceries')"
-    class="group flex w-[100px] cursor-pointer flex-col items-center">
-    <div class="h-[90px] w-full overflow-hidden rounded-xl border border-slate-200 border-b-[5px] border-b-blue-500 bg-white shadow-sm transition-all duration-300 group-hover:-translate-y-1 group-hover:border-blue-500 group-hover:shadow-lg group-hover:shadow-blue-200">
-      <img src="https://cdn.dummyjson.com/product-images/groceries/apple/thumbnail.webp"
-        class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-110" alt="Groceries">
-    </div>
-    <span class="mt-2 text-center text-xs font-semibold text-slate-700 group-hover:text-blue-600">Groceries</span>
-  </div>
-
-  <!-- Home Decoration -->
-  <div (click)="getProductsByCategory('home-decoration')"
-    class="group flex w-[100px] cursor-pointer flex-col items-center">
-    <div class="h-[90px] w-full overflow-hidden rounded-xl border border-slate-200 border-b-[5px] border-b-blue-500 bg-white shadow-sm transition-all duration-300 group-hover:-translate-y-1 group-hover:border-blue-500 group-hover:shadow-lg group-hover:shadow-blue-200">
-      <img src="https://cdn.dummyjson.com/product-images/home-decoration/plant-pot/thumbnail.webp"
-        class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-110" alt="Home Decoration">
-    </div>
-    <span class="mt-2 text-center text-xs font-semibold text-slate-700 group-hover:text-blue-600">Home Decoration</span>
-  </div>
-
-  <!-- Kitchen Accessories -->
-  <div (click)="getProductsByCategory('kitchen-accessories')"
-    class="group flex w-[100px] cursor-pointer flex-col items-center">
-    <div class="h-[90px] w-full overflow-hidden rounded-xl border border-slate-200 border-b-[5px] border-b-blue-500 bg-white shadow-sm transition-all duration-300 group-hover:-translate-y-1 group-hover:border-blue-500 group-hover:shadow-lg group-hover:shadow-blue-200">
-      <img src="https://cdn.dummyjson.com/product-images/kitchen-accessories/bamboo-spatula/thumbnail.webp"
-        class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-110" alt="Kitchen Accessories">
-    </div>
-    <span class="mt-2 text-center text-xs font-semibold text-slate-700 group-hover:text-blue-600">Kitchen Accessories</span>
-  </div>
-
-  <!-- Laptops -->
-  <div (click)="getProductsByCategory('laptops')"
-    class="group flex w-[100px] cursor-pointer flex-col items-center">
-    <div class="h-[90px] w-full overflow-hidden rounded-xl border border-slate-200 border-b-[5px] border-b-blue-500 bg-white shadow-sm transition-all duration-300 group-hover:-translate-y-1 group-hover:border-blue-500 group-hover:shadow-lg group-hover:shadow-blue-200">
-      <img src="https://cdn.dummyjson.com/product-images/laptops/apple-macbook-pro-14-inch-space-grey/thumbnail.webp"
-        class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-110" alt="Laptops">
-    </div>
-    <span class="mt-2 text-center text-xs font-semibold text-slate-700 group-hover:text-blue-600">Laptops</span>
-  </div>
-
-  <!-- Men's Shirts -->
-  <div (click)="getProductsByCategory('mens-shirts')"
-    class="group flex w-[100px] cursor-pointer flex-col items-center">
-    <div class="h-[90px] w-full overflow-hidden rounded-xl border border-slate-200 border-b-[5px] border-b-blue-500 bg-white shadow-sm transition-all duration-300 group-hover:-translate-y-1 group-hover:border-blue-500 group-hover:shadow-lg group-hover:shadow-blue-200">
-      <img src="https://cdn.dummyjson.com/product-images/mens-shirts/blue-&-black-check-shirt/thumbnail.webp"
-        class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-110" alt="Men's Shirts">
-    </div>
-    <span class="mt-2 text-center text-xs font-semibold text-slate-700 group-hover:text-blue-600">Men's Shirts</span>
-  </div>
-
-  <!-- Men's Shoes -->
-  <div (click)="getProductsByCategory('mens-shoes')"
-    class="group flex w-[100px] cursor-pointer flex-col items-center">
-    <div class="h-[90px] w-full overflow-hidden rounded-xl border border-slate-200 border-b-[5px] border-b-blue-500 bg-white shadow-sm transition-all duration-300 group-hover:-translate-y-1 group-hover:border-blue-500 group-hover:shadow-lg group-hover:shadow-blue-200">
-      <img src="https://cdn.dummyjson.com/product-images/mens-shoes/nike-air-jordan-1-red-and-black/thumbnail.webp"
-        class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-110" alt="Men's Shoes">
-    </div>
-    <span class="mt-2 text-center text-xs font-semibold text-slate-700 group-hover:text-blue-600">Men's Shoes</span>
-  </div>
-
-  <!-- Men's Watches -->
-  <div (click)="getProductsByCategory('mens-watches')"
-    class="group flex w-[100px] cursor-pointer flex-col items-center">
-    <div class="h-[90px] w-full overflow-hidden rounded-xl border border-slate-200 border-b-[5px] border-b-blue-500 bg-white shadow-sm transition-all duration-300 group-hover:-translate-y-1 group-hover:border-blue-500 group-hover:shadow-lg group-hover:shadow-blue-200">
-      <img src="https://cdn.dummyjson.com/product-images/mens-watches/rolex-submariner-watch/thumbnail.webp"
-        class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-110" alt="Men's Watches">
-    </div>
-    <span class="mt-2 text-center text-xs font-semibold text-slate-700 group-hover:text-blue-600">Men's Watches</span>
-  </div>
-
-  <!-- Mobile Accessories -->
-  <div (click)="getProductsByCategory('mobile-accessories')"
-    class="group flex w-[100px] cursor-pointer flex-col items-center">
-    <div class="h-[90px] w-full overflow-hidden rounded-xl border border-slate-200 border-b-[5px] border-b-blue-500 bg-white shadow-sm transition-all duration-300 group-hover:-translate-y-1 group-hover:border-blue-500 group-hover:shadow-lg group-hover:shadow-blue-200">
-      <img src="https://cdn.dummyjson.com/product-images/mobile-accessories/apple-airpods/thumbnail.webp"
-        class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-110" alt="Mobile Accessories">
-    </div>
-    <span class="mt-2 text-center text-xs font-semibold text-slate-700 group-hover:text-blue-600">Mobile Accessories</span>
-  </div>
-
-</div>
 
     <!-- PRODUCTS LAYOUT -->
     <div class="mt-6 grid grid-cols-1 items-start gap-5 lg:mt-8 lg:grid-cols-[230px_minmax(0,1fr)] lg:gap-6">
@@ -351,12 +371,28 @@
 
 
         <!-- NO PRODUCTS MESSAGE -->
-        <div *ngIf="products.length === 0" class="py-10 text-center">
-          <h3 class="text-lg font-bold text-red-500">No Products Found</h3>
-          <p class="text-sm text-red-400">Try another search keyword.</p>
-        </div>
+        <div *ngIf="products.length === 0" 
+     class="flex flex-col items-center justify-center py-10 text-center">
+
+  <!-- No Products Image -->
+  <img
+    src="../../assets/no-product.png"
+    alt="No Products Found"
+    class="w-64 h-56 object-contain mb-4"
+  />
+
+  <!-- <h3 class="text-xl font-bold text-red-500">
+    No Products Found
+  </h3>-->
+<!-- 
+  <p class="mb-8 text-sm text-slate-500">
+    Try another search keyword.
+  </p>  -->
+
+</div>
 
         <!-- PRODUCTS GRID -->
+
         <div *ngIf="products.length > 0"
           class="mt-2 grid min-w-0 grid-cols-3 gap-2 sm:grid-cols-3 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5">
 
@@ -380,20 +416,48 @@
                 {{ product.title }}
               </h3>
 
-              <div class="flex flex-wrap items-center justify-between gap-1">
-                <span class="text-xs font-extrabold text-indigo-600 sm:text-base">
-                  ${{ product.price }}
-                </span>
-                <span class="text-[10px] font-semibold text-amber-600 sm:text-xs">
-                  Rating: {{ product.rating }}
-                </span>
+              <!-- PRICE -->
+              <div class="mt-2 text-xs font-extrabold text-indigo-600 sm:text-base">
+                ${{ product.price }}
               </div>
+
+              <!-- RATING SCALE -->
+              <div class="mt-2 flex flex-wrap items-center gap-1.5">
+
+                <span class="text-[10px] font-semibold text-slate-600 sm:text-xs">
+                  Rating
+                </span>
+
+                <div class="h-1.5 w-12 overflow-hidden rounded-full bg-slate-200 sm:w-16">
+                  <div class="h-full rounded-full bg-amber-400" [style.width.%]="(product.rating / 5) * 100">
+                  </div>
+                </div>
+
+                <span class="whitespace-nowrap text-[10px] font-bold text-slate-700 sm:text-xs">
+                  {{ product.rating }}/5
+                </span>
+
+              </div>
+
+              <!-- VIEW PRODUCT BUTTON -->
+              <!-- VIEW PRODUCT BUTTON -->
+              <button (click)="viewProduct(product.id)"
+                class="group mt-auto flex w-full items-center justify-center gap-1 overflow-hidden rounded-lg bg-blue-600 px-2 py-2 text-[10px] font-semibold text-white shadow-sm transition-all duration-300 hover:bg-blue-700 active:scale-95 sm:mt-3 sm:px-3 sm:py-2.5 sm:text-xs">
+
+                <span class="transition-transform duration-300 group-hover:-translate-x-1">
+                  View Product
+                </span>
+
+                <span
+                  class="inline-block translate-x-[-5px] opacity-0 transition-all duration-300 group-hover:translate-x-0 group-hover:opacity-100">
+                  →
+                </span>
+
+              </button>
 
             </div>
           </section>
         </div>
-
-
 
       </section>
     </div>
