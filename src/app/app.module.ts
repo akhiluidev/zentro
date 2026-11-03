@@ -15,6 +15,7 @@ import { ProductsComponent } from './products/products.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FooterComponent } from './footer/footer.component';
 import { ProductDetailsComponent } from './product-details/product-details.component';
+import { HeaderComponent } from './header/header.component';
 
 
 
@@ -34,7 +35,9 @@ import { ProductDetailsComponent } from './product-details/product-details.compo
     AppRoutingModule,
     ProductsComponent,
     HttpClientModule,
-    FooterComponent
+    FooterComponent,
+        HeaderComponent,
+
 
 
 

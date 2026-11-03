@@ -7,6 +7,9 @@ import { TagModule } from 'primeng/tag';
 import { HttpClient } from '@angular/common/http';
 import { FooterComponent } from '../footer/footer.component';
 import { Router } from '@angular/router';
+import { SharedService } from '../shared.service';
+import { HeaderComponent } from '../header/header.component';
+
 
 @Component({
   selector: 'app-products',
@@ -16,6 +19,7 @@ import { Router } from '@angular/router';
     CarouselModule,
     ButtonModule,
     TagModule,
+    HeaderComponent,
     FooterComponent
   ],
   templateUrl: './products.component.html',
@@ -25,14 +29,12 @@ export class ProductsComponent {
 
   products: any[] = [];
   filterProducts: any[] = [];
-
-  showProfile = false;
   userDetails: any;
   zentroUsers: any;
 
   selectedCategory: string = '';
 
-  constructor(private http: HttpClient, private router: Router) {
+  constructor(private http: HttpClient, private router: Router, private shared: SharedService) {
 
   }
 
@@ -119,15 +121,15 @@ export class ProductsComponent {
     this.getProducts();
   }
 
-  logout(): void {
-    localStorage.removeItem('isLoggedIn');
-    localStorage.removeItem('loggedInUser');
+  // logout(): void {
+  //   localStorage.removeItem('isLoggedIn');
+  //   localStorage.removeItem('loggedInUser');
 
-    this.showProfile = false;
+  //   this.showProfile = false;
 
-    this.router.navigate(['/login']);
-  }
-viewProduct(id: number): void {
-  this.router.navigate(['/product-details', id]);
+  //   this.router.navigate(['/login']);
+  // }
+ viewProduct(id: number): void {
+  this.shared.viewProduct(id);
 }
 }

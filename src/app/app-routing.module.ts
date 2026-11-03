@@ -4,6 +4,7 @@ import { LoginComponent } from './login/login.component';
 import { ProductsComponent } from './products/products.component';
 import { RegisterComponent } from './register/register.component';
 import { AuthGuard } from './auth.guard';
+import { ProductDetailsComponent } from './product-details/product-details.component';
 
 
 const routes: Routes = [
@@ -16,9 +17,11 @@ const routes: Routes = [
     component: ProductsComponent,
     canActivate: [AuthGuard]
   },
+  {
+    path: 'product-details/:id',
+    component: ProductDetailsComponent
+  },
 
-  { path: '', redirectTo: 'login', pathMatch: 'full' },
-  { path: '**', redirectTo: 'login' }
 ];
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
