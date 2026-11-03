@@ -1,40 +1,38 @@
-<!-- HEADER NAVBAR -->
-<nav
-  class="sticky top-0 z-50 h-[72px] w-full bg-gradient-to-r from-indigo-700 to-blue-950 text-white shadow-lg sm:h-[88px]">
 
-  <div class="mx-auto flex h-full max-w-[1600px] items-center justify-between gap-3 px-3 sm:px-6 lg:px-8">
+<!-- HEADER NAVBAR -->
+<nav class="sticky top-0 z-50 h-[72px] w-full bg-gradient-to-r from-indigo-700 to-blue-950 text-white shadow-lg sm:h-[80px]">
+
+  <div class="mx-auto flex h-full max-w-[1600px] items-center justify-between px-4 sm:px-6 lg:px-8">
 
     <!-- LOGO -->
-    <div class="shrink-0">
+    <div>
       <h1 class="font-mono text-2xl font-black sm:text-3xl">
         Zentro<span class="text-indigo-300">.</span>
       </h1>
-
       <p class="hidden text-xs text-indigo-100 sm:block">
         Shop smart. Live better.
       </p>
     </div>
 
-    <!-- ACTIONS -->
-    <div class="flex shrink-0 items-center gap-3 sm:gap-5">
+    <!-- DESKTOP ACTIONS -->
+    <div class="hidden items-center gap-6 md:flex">
 
-      <span class="cursor-pointer text-xl sm:text-2xl">♡</span>
+      <span class="cursor-pointer text-2xl">♡</span>
+      <span class="cursor-pointer text-2xl">🛒</span>
 
-      <span class="cursor-pointer text-xl sm:text-2xl">🛒</span>
-
-      <!-- PROFILE -->
-      <div class="relative flex h-8 w-8 items-center justify-center rounded-full bg-indigo-400 sm:h-9 sm:w-9">
+      <!-- DESKTOP PROFILE -->
+      <div class="relative">
 
         <img
-          class="h-full w-full cursor-pointer rounded-full object-cover"
           src="../../assets/profile-icon.png"
           alt="Profile"
-          (click)="showProfile = !showProfile" />
+          class="h-10 w-10 cursor-pointer rounded-full border-2 border-white object-cover"
+          (click)="toggleProfile()" />
 
-        <!-- ACCOUNT POPUP -->
+        <!-- PROFILE POPUP -->
         <div
           *ngIf="showProfile"
-          class="absolute right-0 top-11 z-50 w-72 rounded-xl border border-gray-200 bg-white p-5 text-slate-800 shadow-xl">
+          class="absolute right-0 top-12 z-50 w-72 rounded-xl border bg-white p-5 text-slate-800 shadow-xl">
 
           <h3 class="mb-4 text-lg font-bold">My Account</h3>
 
@@ -58,10 +56,102 @@
           </button>
 
         </div>
+      </div>
+    </div>
 
+    <!-- MOBILE / TABLET MENU ICON -->
+    <button
+      type="button"
+      class="text-3xl md:hidden"
+      (click)="toggleSidebar()">
+      ☰
+    </button>
+
+  </div>
+</nav>
+
+
+<!-- SIDEBAR OVERLAY -->
+<div
+  *ngIf="showSidebar"
+  class="fixed inset-0 z-[60] bg-black/50 md:hidden"
+  (click)="closeSidebar()">
+</div>
+
+
+<!-- MOBILE / TABLET SIDEBAR -->
+<aside
+  class="fixed right-0 top-0 z-[70] h-full w-[300px] max-w-[85vw] bg-white text-slate-800 shadow-2xl transition-transform duration-300 md:hidden"
+  [class.translate-x-0]="showSidebar"
+  [class.translate-x-full]="!showSidebar">
+
+  <!-- SIDEBAR HEADER -->
+  <div class="flex items-center justify-between bg-gradient-to-r from-indigo-700 to-blue-950 p-5 text-white">
+
+    <h2 class="text-xl font-bold">My Account</h2>
+
+    <button
+      type="button"
+      class="text-3xl"
+      (click)="closeSidebar()">
+      ×
+    </button>
+
+  </div>
+
+  <!-- PROFILE DETAILS -->
+  <div class="p-5">
+
+    <div class="mb-6 flex items-center gap-3">
+
+      <img
+        src="../../assets/profile-icon.png"
+        alt="Profile"
+        class="h-14 w-14 rounded-full border-2 border-indigo-600 object-cover" />
+
+      <div>
+        <h3 class="font-bold">
+          {{ zentroUsers?.fullName }}
+        </h3>
+        <p class="text-sm text-gray-500">Welcome back!</p>
       </div>
 
     </div>
 
+    <hr class="mb-5">
+
+    <div class="space-y-5">
+
+      <div>
+        <p class="text-xs font-semibold uppercase text-gray-400">Name</p>
+        <p class="break-words font-medium">
+          {{ userDetails?.fullName }}
+        </p>
+      </div>
+
+      <div>
+        <p class="text-xs font-semibold uppercase text-gray-400">Email</p>
+        <p class="break-all font-medium">
+          {{ userDetails?.email }}
+        </p>
+      </div>
+
+      <div>
+        <p class="text-xs font-semibold uppercase text-gray-400">Phone</p>
+        <p class="font-medium">
+          {{ userDetails?.phone }}
+        </p>
+      </div>
+
+    </div>
+
+    <button
+      type="button"
+      (click)="logout()"
+      class="mt-8 w-full rounded-lg bg-red-600 px-4 py-3 font-semibold text-white hover:bg-red-700">
+      Logout
+    </button>
+
   </div>
-</nav>
+
+</aside>

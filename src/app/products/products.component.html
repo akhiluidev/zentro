@@ -47,6 +47,7 @@
         </button>
       </div>
 
+
       <div class="flex w-full min-w-0 items-center justify-center">
         <div
           class="relative mx-auto w-full min-w-0 max-w-3xl overflow-hidden rounded-3xl bg-gradient-to-br from-indigo-50 via-blue-50 to-sky-100 p-3 sm:p-5 lg:p-8">
@@ -225,65 +226,157 @@
     <div class="mt-6 grid grid-cols-1 items-start gap-5 lg:mt-8 lg:grid-cols-[230px_minmax(0,1fr)] lg:gap-6">
 
       <!-- SIDEBAR -->
-      <aside class="hidden self-start rounded-2xl border border-slate-200 bg-white p-5 lg:sticky lg:top-20 lg:block">
 
-        <h3 class="text-lg font-extrabold">Categories</h3>
+      <aside
+        class="hidden self-start rounded-2xl border border-slate-200 bg-white p-5 shadow-sm lg:sticky lg:top-20 lg:block">
 
-        <div class="mt-4 space-y-2">
-          <div class="rounded-xl bg-indigo-50 px-3 py-3 text-sm font-bold text-indigo-700">
-            All Products
-          </div>
+        <!-- FILTER HEADER -->
+        <div class="flex items-center justify-between">
+          <h3 class="text-lg font-extrabold text-slate-900">
+            Filters
+          </h3>
 
-          <div class="rounded-xl px-3 py-3 text-sm text-slate-600 hover:bg-slate-50">
-            Electronics
-          </div>
+          <button type="button" class="text-xs font-bold text-indigo-600 hover:text-indigo-800">
+            Clear All
+          </button>
+        </div>
 
-          <div class="rounded-xl px-3 py-3 text-sm text-slate-600 hover:bg-slate-50">
-            Fashion
-          </div>
+        <!-- CATEGORIES -->
+        <div class="mt-5">
+          <h4 class="mb-3 text-sm font-bold text-slate-900">
+            Categories
+          </h4>
 
-          <div class="rounded-xl px-3 py-3 text-sm text-slate-600 hover:bg-slate-50">
-            Accessories
+
+
+
+
+
+        </div>
+
+        <div class="my-5 border-t border-slate-100"></div>
+
+        <!-- PRICE RANGE -->
+        <div>
+          <h4 class="mb-3 text-sm font-bold text-slate-900">
+            Price Range
+          </h4>
+
+          <div class="space-y-3 text-sm text-slate-600">
+
+            <label class="flex cursor-pointer items-center gap-3">
+              <input type="checkbox" class="h-4 w-4 accent-indigo-600">
+              Under $50
+            </label>
+
+            <label class="flex cursor-pointer items-center gap-3">
+              <input type="checkbox" class="h-4 w-4 accent-indigo-600">
+              $50 - $100
+            </label>
+
+            <label class="flex cursor-pointer items-center gap-3">
+              <input type="checkbox" class="h-4 w-4 accent-indigo-600">
+              $100 - $500
+            </label>
+
+            <label class="flex cursor-pointer items-center gap-3">
+              <input type="checkbox" class="h-4 w-4 accent-indigo-600">
+              Above $500
+            </label>
+
           </div>
         </div>
 
         <div class="my-5 border-t border-slate-100"></div>
 
-        <h3 class="font-bold">Price Range</h3>
+        <!-- CUSTOMER RATINGS -->
+        <div>
+          <h4 class="mb-3 text-sm font-bold text-slate-900">
+            Customer Ratings
+          </h4>
 
-        <div class="mt-4 space-y-4 text-sm text-slate-600">
-          <label class="flex items-center gap-3">
-            <input type="checkbox" class="accent-indigo-600" />
-            Under $50
-          </label>
+          <div class="space-y-3 text-sm text-slate-600">
 
-          <label class="flex items-center gap-3">
-            <input type="checkbox" class="accent-indigo-600" />
-            $50–$100
-          </label>
+            <label class="flex cursor-pointer items-center gap-2">
+              <input type="radio" name="rating" class="accent-indigo-600">
+              <span class="text-amber-400">★★★★★</span>
+              <span>4 & above</span>
+            </label>
 
-          <label class="flex items-center gap-3">
-            <input type="checkbox" class="accent-indigo-600" />
-            $100–$500
-          </label>
+            <label class="flex cursor-pointer items-center gap-2">
+              <input type="radio" name="rating" class="accent-indigo-600">
+              <span class="text-amber-400">★★★★☆</span>
+              <span>3 & above</span>
+            </label>
 
-          <label class="flex items-center gap-3">
-            <input type="checkbox" class="accent-indigo-600" />
-            Above $500
-          </label>
+            <label class="flex cursor-pointer items-center gap-2">
+              <input type="radio" name="rating" class="accent-indigo-600">
+              <span class="text-amber-400">★★★☆☆</span>
+              <span>2 & above</span>
+            </label>
+
+          </div>
         </div>
 
         <div class="my-5 border-t border-slate-100"></div>
 
-        <h3 class="font-bold">Ratings</h3>
+        <!-- AVAILABILITY -->
+        <div>
+          <h4 class="mb-3 text-sm font-bold text-slate-900">
+            Availability
+          </h4>
 
-        <!-- <div class="mt-4 space-y-3 text-sm text-slate-600">
-          <p>⭐ 4 & above</p>
-          <p>⭐ 3 & above</p>
-          <p>⭐ 2 & above</p>
-        </div> -->
+          <div class="space-y-3 text-sm text-slate-600">
+
+            <label class="flex cursor-pointer items-center gap-3">
+              <input type="checkbox" class="h-4 w-4 accent-indigo-600">
+              In Stock
+            </label>
+
+            <label class="flex cursor-pointer items-center gap-3">
+              <input type="checkbox" class="h-4 w-4 accent-indigo-600">
+              Out of Stock
+            </label>
+
+          </div>
+        </div>
+
+        <div class="my-5 border-t border-slate-100"></div>
+
+        <!-- DISCOUNT -->
+        <div>
+          <h4 class="mb-3 text-sm font-bold text-slate-900">
+            Discount
+          </h4>
+
+          <div class="space-y-3 text-sm text-slate-600">
+
+            <label class="flex cursor-pointer items-center gap-3">
+              <input type="checkbox" class="h-4 w-4 accent-indigo-600">
+              10% or more
+            </label>
+
+            <label class="flex cursor-pointer items-center gap-3">
+              <input type="checkbox" class="h-4 w-4 accent-indigo-600">
+              20% or more
+            </label>
+
+            <label class="flex cursor-pointer items-center gap-3">
+              <input type="checkbox" class="h-4 w-4 accent-indigo-600">
+              50% or more
+            </label>
+
+          </div>
+        </div>
+
+        <!-- BOTTOM RESET -->
+        <button type="button"
+          class="mt-6 w-full rounded-xl border border-indigo-200 bg-indigo-50 py-2.5 text-sm font-bold text-indigo-700 transition hover:bg-indigo-100">
+          Reset Filters ↻
+        </button>
 
       </aside>
+
 
       <!-- PRODUCT SECTION -->
       <section class="min-w-0">
@@ -322,11 +415,7 @@
 
         <!-- PRODUCTS GRID -->
 
-        <div *ngIf="products.length > 0"
-          class="mt-2 grid min-w-0 grid-cols-2 gap-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5">
-
-
-
+        <div *ngIf="products.length > 0" class="mt-2 grid min-w-0 grid-cols-2 gap-2 md:grid-cols-3 lg:grid-cols-4">
           <section *ngFor="let product of products"
             class="flex min-w-0 flex-col overflow-hidden rounded-xl border border-slate-200 bg-white shadow-sm transition hover:shadow-md">
 
@@ -370,22 +459,30 @@
 
               </div>
 
-              <!-- BUTTON -->
               <div class="mt-2 flex w-full items-center gap-1">
 
                 <!-- View Product -->
                 <button type="button" (click)="viewProduct(product.id)"
-                  class="flex h-8 min-w-0 flex-1 items-center justify-center whitespace-nowrap rounded-md bg-blue-600 px-1 text-[9px] font-semibold text-white hover:bg-blue-700 active:scale-95">
+                  class="group flex h-8 min-w-0 flex-1 items-center justify-center gap-1 whitespace-nowrap rounded-md bg-blue-600 px-1 text-[9px] font-semibold text-white transition-colors duration-300 hover:bg-blue-800 active:scale-95">
+
                   View Product
+                  <span class="inline-block transition-transform duration-300 group-hover:translate-x-1">
+                    →
+                  </span>
                 </button>
 
                 <!-- Add to Cart -->
                 <button type="button"
-                  class="flex h-8 min-w-0 flex-1 items-center justify-center whitespace-nowrap rounded-md bg-indigo-600 px-1 text-[9px] font-semibold text-white hover:bg-indigo-700 active:scale-95">
+                  class="group flex h-8 min-w-0 flex-1 items-center justify-center gap-1 whitespace-nowrap rounded-md bg-indigo-600 px-1 text-[9px] font-semibold text-white transition-colors duration-300 hover:bg-indigo-800 active:scale-95">
+
                   Add to Cart
+                  <span class="inline-block transition-transform duration-300 group-hover:translate-x-1">
+                    →
+                  </span>
                 </button>
 
               </div>
+
             </div>
           </section>
 
@@ -394,6 +491,7 @@
 
       </section>
     </div>
+
   </main>
 
   <!-- FOOTER -->
