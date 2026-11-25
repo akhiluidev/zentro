@@ -1,0 +1,30 @@
+.active-arrow {
+  position: absolute;
+  bottom: -32px;
+  color: #2563eb;
+  font-size: 40px;
+  font-weight: 900;
+  line-height: 1;
+  animation: arrowMove 0.7s ease-in-out infinite,
+             arrowBlink 0.8s ease-in-out infinite;
+}
+
+@keyframes arrowMove {
+  0% {
+    transform: translateY(8px);
+  }
+
+  100% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes arrowBlink {
+  0%, 100% {
+    opacity: 0.3;
+  }
+
+  50% {
+    opacity: 1;
+  }
+}

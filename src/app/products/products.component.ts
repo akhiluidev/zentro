@@ -103,6 +103,8 @@ export class ProductsComponent {
         },
         error: (error) => {
           console.error('Category loading failed:', error);
+          this.products = [];
+          this.filterProducts = [];
         }
       });
   }
@@ -129,7 +131,7 @@ export class ProductsComponent {
 
   //   this.router.navigate(['/login']);
   // }
- viewProduct(id: number): void {
-  this.shared.viewProduct(id);
-}
+  viewProduct(id: number): void {
+    this.shared.viewProduct(id);
+  }
 }
